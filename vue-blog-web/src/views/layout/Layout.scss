@@ -1,0 +1,29 @@
+@import "/src/styles/variables";
+$headerHeight: 60px;
+$footerHeight: 60px;
+$mainHeight: 810px; // 加一个minHeight 防止中间内容高度不够时，底部的footer顶上来，不美观
+
+.layout-container {
+  background-color: $layoutBg;
+  min-width: $w;
+  min-height: 100%;
+
+  header {
+    height: $headerHeight;
+    background: #181818;
+    overflow: hidden;
+  }
+
+  main {
+    min-height: $mainHeight;
+    @include w;
+  }
+
+  footer {
+    background: #181818;
+    color: #ffffff;
+    margin-top: 20px;
+    height: $footerHeight;
+    box-sizing: border-box;
+  }
+}
